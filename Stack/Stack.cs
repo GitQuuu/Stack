@@ -10,7 +10,7 @@ namespace Stack
     class Stack
     {
         
-        private List<object> _list = new List<object>();
+        private readonly List<object> _list = new List<object>();
 
        public void Push(object obj)
        {
@@ -20,7 +20,7 @@ namespace Stack
            }
            else
            {
-               var _list = (int)obj;
+               var _list = obj;
 
                this._list.Add(obj);
                
@@ -42,10 +42,10 @@ namespace Stack
             return _list.ToString();
         }
 
-        //public void Clear()
-        //{
+        public void Clear()
+        {
 
-        //}
-     
+        }
+
     }
 }
