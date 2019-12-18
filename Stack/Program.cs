@@ -16,7 +16,7 @@ namespace Stack
             stack.Push(2);
             stack.Push(3);
 
-            Console.WriteLine(stack.Pop().ToString());
+            Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());
 
