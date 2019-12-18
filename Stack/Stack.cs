@@ -19,7 +19,7 @@ namespace Stack
            }
            else
            {
-               var _list = obj;
+               var _list = (obj);
 
                this._list.Add(obj);
                
@@ -29,17 +29,21 @@ namespace Stack
 
         public object Pop()
         {
+            int lastInFirstOut;
+
             if (_list == null)
             {
                 throw new InvalidOperationException();
             }
             else
             {
+
                 _list.Reverse();
                 _list.Remove(_list.Count);
+
             }
-            
-            return _list.ToString();
+
+            return _list;
         }
 
         public void Clear()
