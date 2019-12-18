@@ -9,7 +9,6 @@ namespace Stack
 {
     class Stack
     {
-        
         private readonly List<object> _list = new List<object>();
 
        public void Push(object obj)
@@ -36,7 +35,8 @@ namespace Stack
             }
             else
             {
-                _list.Remove(_list.Count - 1);
+                _list.Reverse();
+                _list.Remove(_list.Count);
             }
             
             return _list.ToString();
