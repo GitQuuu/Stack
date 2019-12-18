@@ -39,11 +39,12 @@ namespace Stack
             {
 
                 _list.Reverse();
+                lastInFirstOut = (int)_list.ElementAt(_list.Count - 1);
                 _list.Remove(_list.Count);
 
             }
 
-            return _list;
+            return lastInFirstOut;
         }
 
         public void Clear()
