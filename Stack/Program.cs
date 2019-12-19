@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,17 @@ namespace Stack
         {
             var stack = new Stack();
 
-            stack.Push("a");
+            //stack.Push("a");
             stack.Push("b");
-            stack.Push("c");
+    
 
             Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+
+
+
+
 
             Console.ReadLine();
         }

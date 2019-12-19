@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,16 +30,16 @@ namespace Stack
 
         public object Pop()
         {
-            object lastInFirstOut = 0;
+            object lastInFirstOut;
 
-            if (_list == null)
+            if (_list.Count == 0 )
             {
                 throw new InvalidOperationException();
             }
             else
             {
                 lastInFirstOut = _list.ElementAt(_list.Count - 1);
-                Clear();
+                _list.RemoveAt(_list.Count - 1);
             }
 
             return lastInFirstOut;
@@ -46,8 +47,11 @@ namespace Stack
 
         public void Clear()
         {
-            _list.RemoveAt(_list.Count - 1);
+            _list.RemoveAll(_list.Contains);
         }
+
+      
+        
 
     }
 }
