@@ -9,7 +9,7 @@ namespace Stack
 {
     class Stack
     {
-        private readonly List<object> _list = new List<object>();
+        private  readonly List<object> _list = new List<object>();
 
        public void Push(object obj)
        {
@@ -29,7 +29,7 @@ namespace Stack
 
         public object Pop()
         {
-            int lastInFirstOut;
+            int lastInFirstOut = 0;
 
             if (_list == null)
             {
@@ -37,11 +37,8 @@ namespace Stack
             }
             else
             {
-
-                _list.Reverse();
                 lastInFirstOut = (int)_list.ElementAt(_list.Count - 1);
-                _list.Remove(_list.Count);
-
+                _list.RemoveAt(_list.Count-1);
             }
 
             return lastInFirstOut;
