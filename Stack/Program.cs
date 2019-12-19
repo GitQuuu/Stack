@@ -12,9 +12,9 @@ namespace Stack
         {
             var stack = new Stack();
 
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
 
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());

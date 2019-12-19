@@ -29,7 +29,7 @@ namespace Stack
 
         public object Pop()
         {
-            int lastInFirstOut = 0;
+            object lastInFirstOut = 0;
 
             if (_list == null)
             {
@@ -37,8 +37,8 @@ namespace Stack
             }
             else
             {
-                lastInFirstOut = (int)_list.ElementAt(_list.Count - 1);
-                _list.RemoveAt(_list.Count-1);
+                lastInFirstOut = _list.ElementAt(_list.Count - 1);
+                Clear();
             }
 
             return lastInFirstOut;
@@ -46,7 +46,7 @@ namespace Stack
 
         public void Clear()
         {
-
+            _list.RemoveAt(_list.Count - 1);
         }
 
     }
